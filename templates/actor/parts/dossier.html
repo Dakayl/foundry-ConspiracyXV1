@@ -1,0 +1,52 @@
+<div class="tab" data-group="primary" data-tab="dossier" >
+    <div class="grid-2col dossier"->
+    <section class="background">
+        <h3>{{localize 'CXV1.Background'}}</h3>
+        <ol>
+            {{#each actor.backgrounds as |trait key|}}
+            {{> "systems/cxv1/templates/actor/lines/trait-line.html"}}
+            {{/each}}
+        </ol>
+    </section>
+    <section class="training">
+        <h3>{{localize 'CXV1.Training'}}</h3>
+        <ol>
+            {{#each actor.trainings as |trait key|}}
+            {{> "systems/cxv1/templates/actor/lines/trait-line.html"}}
+            {{/each}}
+        </ol>
+    </section>
+    <section class="medical">
+        <h3>{{localize 'CXV1.MedicalRecord'}}</h3>
+        <ol>
+            {{#each actor.medicals as |trait key|}}
+            {{> "systems/cxv1/templates/actor/lines/trait-line.html"}}
+            {{/each}}
+        </ol>
+    </section>
+    <section class="psychological">
+        <h3>{{localize 'CXV1.PsychologicalProfile'}}</h3>
+        <ol>
+            {{#each actor.psychologicals as |trait key|}}
+            {{> "systems/cxv1/templates/actor/lines/trait-line.html"}}
+            {{/each}}
+        </ol>
+    </section>
+    <section class="talents">
+        <h3>{{localize 'CXV1.TalentsAndAbilities'}}</h3>
+        <ol>
+            {{#each actor.talents as |trait key|}}
+            {{> "systems/cxv1/templates/actor/lines/trait-line.html"}}
+            {{/each}}
+        </ol>
+    </section>
+    <section class="maneuvers">
+        <h3>{{localize 'CXV1.Maneuvers'}}</h3>
+        <ol>
+            {{#each actor.maneuvers as |trait key|}}
+            {{> "systems/cxv1/templates/actor/lines/trait-line.html"}}
+            {{/each}}
+        </ol>
+    </section>
+    </div>
+</div>

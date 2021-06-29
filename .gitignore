@@ -2,6 +2,9 @@
 .idea/
 .vs/
 
+*:Zone.Identifier
+**/*:Zone.Identifier
+
 # Logs
 logs
 *.log

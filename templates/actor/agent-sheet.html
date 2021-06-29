@@ -1,0 +1,59 @@
+<form class="agent-sheet editable" autocomplete="off">
+    <header class="sheet-header">
+        <div class="grid-2col wide">
+            <div class="profile-img-zone">
+                {{> "systems/cxv1/templates/actor/parts/profile-image.html"}}
+            </div>
+            <aside>
+                <label>{{localize "CXV1.CodeName"}} :</label>
+                <input type="text" name="name" value="{{actor.name}}" placeholder="{{localize 'CXV1.CodeName'}}" />
+                <label>{{localize "CXV1.Departement"}} :</label>
+                <input type="text" value="{{actor.organisation.data.departement}}" placeholder="{{localize 'CXV1.Departement'}}" readonly />
+                <label>{{localize "CXV1.Organisation"}} :</label>
+                <input type="text" value="{{actor.organisation.name}}" placeholder="{{localize 'CXV1.Organisation'}}" readonly/>
+                <label>{{localize "CXV1.Job"}} :</label>
+                <input type="text" name="data.file.job" value="{{actor.organisation.data.job}}" placeholder="{{localize 'CXV1.Job'}}" readonly />
+                <label>{{localize "CXV1.SocialSecurityID"}} :</label>
+                <input type="text" name="data.file.socialsecurity" value="{{data.data.file.socialsecurity}}" placeholder="{{localize 'CXV1.SocialSecurityID'}}" />
+                <ol>
+                    {{#if actor.organisation.data.hasArmyInfluence}}
+                    <li class="influence-cell military"><img src="systems/cxv1/images/military.svg" alt="{{localize 'CXV1.MilitaryInfluence'}}" title="{{localize 'CXV1.MilitaryInfluence'}}"/></li>
+                    {{/if}}
+                    {{#if actor.organisation.data.hasIntelInfluence}}
+                    <li class="influence-cell intelligence"><img src="systems/cxv1/images/photo.svg" alt="{{localize 'CXV1.IntelligenceInfluence'}}" title="{{localize 'CXV1.IntelligenceInfluence'}}" /></li>
+                    {{/if}}
+                    {{#if actor.organisation.data.hasScienceInfluence}}
+                    <li class="influence-cell science"><img src="systems/cxv1/images/chemical.svg" alt="{{localize 'CXV1.ScienceInfluence'}}" title="{{localize 'CXV1.ScienceInfluence'}}"  /></li>
+                    {{/if}}
+                    {{#if actor.organisation.data.hasCriminalInfluence}}
+                    <li class="influence-cell criminal"><img src="systems/cxv1/images/knife.svg" alt="{{localize 'CXV1.CriminalInfluence'}}" title="{{localize 'CXV1.CriminalInfluence'}}" /></li>
+                    {{/if}}
+                    {{#if actor.organisation.data.hasPoliceInfluence}}
+                    <li class="influence-cell police"><img src="systems/cxv1/images/police.svg"  alt="{{localize 'CXV1.PoliceInfluence'}}" title="{{localize 'CXV1.PoliceInfluence'}}"  /></li>
+                    {{/if}}
+                    {{#if actor.organisation.data.hasMediaInfluence}}
+                    <li class="influence-cell media"><img src="systems/cxv1/images/tv.svg" alt="{{localize 'CXV1.MediaInfluence'}}" title="{{localize 'CXV1.MediaInfluence'}}" /></li>
+                    {{/if}}
+                </ol>
+            </aside>
+        </div>
+      
+    </header>
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="informations">{{localize "CXV1.Informations"}}</a>
+        <a class="item" data-tab="attributes">{{localize "CXV1.Attributes"}}</a>        
+        <a class="item" data-tab="skills">{{localize "CXV1.Skills"}}</a>
+        <a class="item" data-tab="dossier">{{localize "CXV1.Dossier"}}</a>
+        <a class="item" data-tab="equipement">{{localize "CXV1.Equipement"}}</a>
+        <a class="item" data-tab="notes">{{localize "CXV1.Notes"}}</a>
+    </nav>
+    <section class="sheet-body">
+        {{> "systems/cxv1/templates/actor/parts/attributes.html"}}
+        {{> "systems/cxv1/templates/actor/parts/informations.html"}}
+        {{> "systems/cxv1/templates/actor/parts/skills.html"}}
+        {{> "systems/cxv1/templates/actor/parts/dossier.html"}}
+        {{> "systems/cxv1/templates/actor/parts/agent-equipement.html"}}
+        {{> "systems/cxv1/templates/actor/parts/notes.html"}}
+    </section>
+</col>
+</form>

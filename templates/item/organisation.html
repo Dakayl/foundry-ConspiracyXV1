@@ -1,0 +1,78 @@
+<form class="organisation-sheet editable" autocomplete="off">
+    <header class="sheet-header">
+        <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" alt="Item Image" />
+        <div class="header-fields">
+            <h1>{{localize 'CXV1.Organisation'}}</h1>
+            <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'CXV1.Organisation'}}" /></h1>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "CXV1.Description"}}</a>
+        <a class="item" data-tab="influences">{{localize "CXV1.Influences"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        <div class="tab description" data-group="primary" data-tab="description">
+            <label>{{localize "CXV1.Departement"}} :</label>
+            <input type="text" name="data.departement" value="{{data.data.departement}}" placeholder="{{localize 'CXV1.Departement'}}" />
+            <label>{{localize "CXV1.Job"}} :</label>
+            <input type="text" name="data.job" value="{{data.data.job}}" placeholder="{{localize 'CXV1.Job'}}" />
+            <label>{{localize "CXV1.Description"}} :</label>
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+        {{!-- Attributes Tab --}}
+        <div class="tab influences" data-group="primary" data-tab="influences">
+            <div class="influences-checklist">
+                <ol>
+                    <input id="MilitaryInfluence" type="checkbox" name="data.hasArmyInfluence" data-dtype="Boolean"
+                    {{checked data.data.hasArmyInfluence}} />
+                    <li class="influence-cell military">
+                        <label for="MilitaryInfluence">
+                            <img src="systems/cxv1/images/military.svg" alt="{{localize 'CXV1.MilitaryInfluence'}}" title="{{localize 'CXV1.MilitaryInfluence'}}"/>
+                        </label>
+                    </li>
+                    <input id="IntelligenceInfluence" type="checkbox" name="data.hasIntelInfluence" data-dtype="Boolean"
+                    {{checked data.data.hasIntelInfluence}} />
+                    <li class="influence-cell intelligence">
+                        <label for="IntelligenceInfluence">
+                            <img src="systems/cxv1/images/photo.svg" alt="{{localize 'CXV1.IntelligenceInfluence'}}" title="{{localize 'CXV1.IntelligenceInfluence'}}" />
+                        </label>
+                    </li>
+                    <input id="ScienceInfluence"  type="checkbox" name="data.hasScienceInfluence" data-dtype="Boolean"
+                    {{checked data.data.hasScienceInfluence}} />
+                    <li class="influence-cell science">
+                        <label for="ScienceInfluence">
+                            <img src="systems/cxv1/images/chemical.svg" alt="{{localize 'CXV1.ScienceInfluence'}}" title="{{localize 'CXV1.ScienceInfluence'}}"  />
+                        </label>                       
+                    </li>
+                    <input id="CriminalInfluence" type="checkbox" name="data.hasCriminalInfluence" data-dtype="Boolean"
+                    {{checked data.data.hasCriminalInfluence}} />
+                    <li class="influence-cell criminal">
+                        <label for="CriminalInfluence">
+                            <img src="systems/cxv1/images/knife.svg" alt="{{localize 'CXV1.CriminalInfluence'}}" title="{{localize 'CXV1.CriminalInfluence'}}" />
+                        </label>
+                    </li>
+                    <input id="PoliceInfluence" type="checkbox" name="data.hasPoliceInfluence" data-dtype="Boolean"
+                    {{checked data.data.hasPoliceInfluence}} />
+                    <li class="influence-cell police">
+                        <label for="PoliceInfluence">
+                            <img src="systems/cxv1/images/police.svg"  alt="{{localize 'CXV1.PoliceInfluence'}}" title="{{localize 'CXV1.PoliceInfluence'}}"  />
+                        </label>
+                    </li>
+                    <input id="MediaInfluence" type="checkbox" name="data.hasMediaInfluence" data-dtype="Boolean"
+                    {{checked data.data.hasMediaInfluence}} />
+                    <li class="influence-cell media">
+                        <label for="MediaInfluence">
+                            <img src="systems/cxv1/images/tv.svg" alt="{{localize 'CXV1.MediaInfluence'}}" title="{{localize 'CXV1.MediaInfluence'}}" />
+                        </label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+</form>

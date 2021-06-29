@@ -1,0 +1,29 @@
+<form class="agent-sheet">
+    <header class="sheet-header">
+        <div class="profile-img-zone">
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="100" />
+        </div>
+        <aside>
+            <label>{{localize "CXV1.CellName"}}</label>
+            <input type="text" value="{{actor.name}}" placeholder="{{localize 'CXV1.CellName'}}" />
+            <label>{{localize "CXV1.PA"}}</label>
+            <input type="number" value="{{data.aegispoints}}" placeholder="" />
+        </aside>
+        <table>
+            <tr>
+                <th colspan="6">
+                    <h1>{{localize "CXV1.Informations"}}</h1>
+                </th>
+            </tr>
+        </table>
+    </header>
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="bases">>{{localize "CXV1.Bases"}}</a>
+        <a class="item" data-tab="equipement">{{localize "CXV1.Equipement"}}</a>
+    </nav>
+    <section class="sheet-body">
+        {{> "systems/cxv1/templates/actor/parts/bases.html"}}
+        {{> "systems/cxv1/templates/actor/parts/cell-equipement.html"}}
+    </section>
+</col>
+</form>

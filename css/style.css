@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "veteranTypewriter";
+    src: url("../fonts/veterantypewriter.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.agent-sheet *, .organisation-sheet * {
+    font-family: "veteranTypewriter";
+}
+.sheet input[type="text"],
+.sheet input[type="number"],
+.sheet input[type="password"],
+.sheet input[type="date"],
+.sheet input[type="time"]
+.sheet textarea {
+    color: #302c3e;
+    background: none;
+    border: none;
+    margin: 1px;
+    padding: 1px;
+}
+
+.sheet input[type="text"]:focus,
+.sheet input[type="number"]:focus,
+.sheet input[type="password"]:focus,
+.sheet input[type="date"]:focus,
+.sheet input[type="time"]:focus
+.sheet textarea:focus {
+    box-shadow: 0 0 5px grey;
+}
+.sheet input[type="text"]:hover,
+.sheet input[type="number"]:hover,
+.sheet input[type="password"]:hover,
+.sheet input[type="date"]:hover,
+.sheet input[type="time"]:hover,
+.sheet textarea:hover {
+    box-shadow: 0 0 5px grey;
+}
+.grid-2col {
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 1px 0;
+    padding: 0;
+}
+.grid-2col.wide {
+    gap: 30px;
+}
+.sheet nav.tabs {
+    background: #1e1b26;
+    color: #e6e5e4;
+    border:0;
+}
+
+.sheet nav.tabs .item {
+    font-size: 12pt;
+    font-weight: bold;
+}
+.sheet nav.tabs .item:hover {
+    text-shadow: 0 0 15px lightgreen;
+}
+.sheet nav.tabs .item.active {
+    text-shadow: 0 0 15px lightgreen;
+}
+
+.sheet .agent-sheet header.sheet-header  {
+    height: 226px;
+    position: relative;
+}
+
+.window-app.sheet .window-content
+{
+    background: none;
+	background-color: #e6e5e4;
+}
+
+.sheet-header aside {
+    width: 395px;
+    position: relative;
+    z-index: 98; 
+}
+.sheet-header aside::after {
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+    width: 395px;
+    background: url('../images/classified-stamp.png') center center;
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+
+
+.sheet-header aside label {
+    color: #1e1b26;
+    font-size: 13pt;
+    display: inline-block;
+    width: 160px;
+    margin: 1px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.sheet-header aside input {
+    font-size: 13pt;
+    display: inline-block;  
+    width: 220px;
+}
+.sheet-header aside ol,
+.influences-checklist ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sheet-header aside ol li,
+.influences-checklist ol li {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px #4d4d4d solid;
+    border-radius: 20px;
+    margin: 2px;
+    align-items: center;
+    justify-content: center;
+}
+.sheet header.sheet-header aside ol li img,
+.influences-checklist ol li img {
+    flex:0;
+    width: 29px;
+    height: 29px;
+    margin: 1px;
+    border: 0;
+}
+
+
+.sheet table {
+    background: none;
+}
+.sheet h1 {
+	color: #1e1b26;
+    font-size: 13pt;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    margin:1px;
+    padding:1px;
+}
+
+.sheet table tr {
+    border:2px #1e1b26 solid;
+	background: none;
+}
+
+.sheet table tr td, .sheet table tr th {
+	border: none;
+	background: none;
+    padding: 0.1em 0;
+}
+
+
+.sheet table tr td label {
+	color:#1e1b26; 
+	font-size: 11pt;
+    font-weight: bold;
+    display: block;
+    margin: 1px;
+    padding: 1px;
+}
+
+.sheet table tr td input {
+	font-size: 12pt;
+	display: block;
+}
+.sheet table.attributes tr th {
+    width: 826px;
+}
+.sheet table.attributes tr td label {
+    display: inline-block;
+    width: 89px;
+    text-align: right;
+}
+.sheet table.attributes tbody {
+    box-sizing: content-box;
+}
+
+.sheet table.attributes tr td input {
+	display: inline-block;
+    width: 50px;
+    font-size: 15pt;
+}
+
+.dossier section {
+    border:2px #1e1b26 solid;
+}
+.sheet h3 {
+    color: #1e1b26;
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 1px;
+    padding: 2px;
+}
+.editor-content {
+    border: 2px #1e1b26 solid;
+    border-radius: 0;
+    background:none;
+    font-size: 12pt;
+    color: #302c3e;
+    height: 200px;
+    margin: 1px;
+    padding: 2px;
+}
+
+.editor-content p {
+    margin: 1px;
+    padding: 2px;
+}
+
+.sheet .diapositive{
+    background: white;
+    width: 180px;
+    height: 225px;
+    padding: 15px 15px 55px 15px;
+    position: absolute;
+    transform: rotate( 10deg );
+    box-shadow: 1px 2px 2px black;
+    top: 0;
+    z-index:100;
+}
+.sheet .black-background {
+    background: black;
+    width: 100%;
+    height: 100%;
+    z-index:101;
+}
+
+.sheet header.sheet-header img.profile-img{
+    width: 100%;
+    height: auto;
+    flex: 0;
+    cursor: pointer;
+    z-index:102;
+}
+
+.sheet header.sheet-header img.org-img {
+    width: 150px;
+    height: auto;
+    flex: 0;
+    margin: 0;
+    border: 0;
+    position: relative;
+    left: 100px;
+    z-index:50;
+}

@@ -1,0 +1,155 @@
+{
+    "Actor": {
+        "types": ["agent", "cell"],
+        "templates": {
+            "attributes" : {
+                "strength" : 1,
+                "size" : 1,
+                "agility" : 1,
+                "reflexes" : 1,
+                "intelligence" : 1,
+                "willpower" : 1,
+                "perception" : 1,
+                "goodluck" : 1,
+                "badluck" : 1,
+                "influence" : 1
+            },
+            "character" : {
+                "file" : {
+                    "firstname" : "",
+                    "lastname" : "",
+                    "datebirth" : "",
+                    "placebirth" : "",
+                    "gender": "",
+                    "height": "",
+                    "weight": "",
+                    "hair": "",
+                    "eyes": "",
+                    "socialsecurity" : "",
+                    "maritalstatus": "",
+                    "address" : "",
+                    "aliases" : "",
+                    "comments" : ""
+                },
+                "health": {
+                    "health-bar-1": {
+                        "current" : 5,
+                        "max" : 5
+                    },
+                    "health-bar-2": {
+                        "current" : 5,
+                        "max" : 5
+                    },
+                    "health-bar-3": {
+                        "current" : 5,
+                        "max" : 5
+                    },
+                    "health-bar-4": {
+                        "current" : 5,
+                        "max" : 5
+                    },
+                    "health-bar-5": {
+                        "current" : 5,
+                        "max" : 5
+                    },
+                    "health-bar-6": {
+                        "current" : 5,
+                        "max" : 5
+                    }
+                }
+            }
+        },
+        "agent": {
+            "templates": ["character", "attributes"]
+        },
+        "cell": {
+            "aegispoints": 1
+        }
+    },
+    "Item": {
+        "types": ["weapon", "equipement", "vehicules", "scientific", "espionage", "base", "staff", "facility", "organisation", "skill", "trait", "resource","maneuver"],
+        "templates": {
+            "base": {
+                "disabled": false,
+                "description": "",
+                "agentOnly": false,
+                "cellOnly": false,
+                "canHaveSkills": false
+            },
+            "influence" : {
+                "cost": 5,
+                "needArmyInfluence": false,
+                "needIntelInfluence": false,
+                "needScienceInfluence": false,
+                "needPoliceInfluence": false,
+                "needMediaInfluence": false,
+                "needCriminalInfluence": false,
+                "specificAgency": ""
+            }
+        },
+        "weapon": {
+            "templates": ["base","influence"],
+            "subtype": "",
+            "costDescription": ""
+        },
+        "equipement": {
+            "templates": ["base","influence"],
+            "subtype": "",
+            "costDescription": ""
+        },
+        "vehicules": {
+            "templates": ["base","influence"],
+            "subtype": "",
+            "speed": 2,
+            "maneuver": "+1sr",
+            "size": 6,
+            "crew": 1,
+            "passengers": 4,
+            "equipement" : ""
+        },
+        "base": {
+            "templates": ["base","influence"],
+            "restriction": "",
+            "cellOnly": true
+        },
+        "staff": {
+            "templates": ["base","influence"],
+            "cellOnly": true,
+            "canHaveSkills": true
+        },
+        "facility": {
+            "templates": ["base","influence"],
+            "subtype": "",
+            "cellOnly": true
+        },
+        "organisation" : {
+            "templates": ["base"],
+            "departement": "",
+            "job": "",
+            "agentOnly": true,
+            "hasArmyInfluence": false,
+            "hasIntelInfluence": false,
+            "hasScienceInfluence": false,
+            "hasPoliceInfluence": false,
+            "hasMediaInfluence": false,
+            "hasCriminalInfluence": false
+        },
+        "skills" : {
+            "templates": ["base"],
+            "attribute" : "",
+            "level": 1,
+            "agentOnly": true
+        },
+        "trait" : {
+            "templates": ["base"],
+            "cost": 5,
+            "subtype": "background",
+            "agentOnly": true
+        },
+        "maneuver" : {
+            "templates": ["base"],
+            "martial-art": "",
+            "agentOnly": true
+        }
+    }
+}

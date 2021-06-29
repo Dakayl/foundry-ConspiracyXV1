@@ -1,0 +1,12 @@
+<div class="tab" data-group="primary" data-tab="notes" >
+    <div class="grid-2col notes"->
+    <section class="alias">
+        <h3>{{localize 'CXV1.Alias'}}</h3>
+        {{editor content=data.data.file.aliases target="data.file.aliases" button=true owner=owner editable=editable}}
+    </section>
+    <section class="comments">
+        <h3>{{localize 'CXV1.Comments'}}</h3>
+        {{editor content=data.data.file.comments target="data.file.comments" button=true owner=owner editable=editable}}
+    </section>
+    </div>
+</div>

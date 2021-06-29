@@ -1,0 +1,36 @@
+.influences-checklist ol li {
+    cursor: pointer;
+}
+.influences-checklist ol li label {
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+}
+.influences-checklist input[type=checkbox] {
+    display:none;
+}
+.influences-checklist ol input[type=checkbox]:not(:checked) + li {
+    background-color: rgba(255,0,0,0.2);;
+}
+.influences-checklist ol input[type=checkbox]:checked + li  {
+    background-color: rgba(0,255,0,0.2);
+}
+
+.sheet .organisation-sheet .description label {
+    color: #1e1b26;
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 1px;
+    padding: 2px;
+}
+
+.sheet .organisation-sheet .description .editor {
+    min-height: 200px;
+}
+.sheet .organisation-sheet .description .editor-content {
+    min-height: 200px;
+}
+.sheet .organisation-sheet header.sheet-header  {
+    height: 70px;
+    position: relative;
+}

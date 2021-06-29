@@ -1,0 +1,15 @@
+<li data-skill-id="{{skill._id}}" class="skill-line">
+    <div>
+        <div>
+            <img src="{{skill.img}}" title="{{skill.name}}" width="24" height="24"  alt="{{skill.name}}" />
+        </div>
+        <h4 class="skill-name">{{skill.name}}</h4>
+        <h5 class="skill-level">{{skill.data.level}}></h5>
+        <h5 class="skill-attribute">{{skill.data.attribute}}></h5>
+        <h5 class="skill-cost">{{skill.data.cost}}></h5>
+        <div class="item-controls">
+            <a class="item-control item-edit" title="{{localize 'CXV1.Edit'}}"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="{{localize 'CXV1.Delete'}}"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,35 @@
+{
+    "name": "cxv1",
+    "title": "Conspiracy X v1",
+    "description": "Conspiracy X v1 system for Foundry VTT!",
+    "version": "0.0.1",
+    "minimumCoreVersion": "0.8.7",
+    "compatibleCoreVersion": "0.8.7",
+    "templateVersion": 1,
+    "author": "Dajayl",
+    "esmodules": ["module/conspiracy.js"],
+    "styles": ["css/style.css", "css/items.css"],
+    "scripts": [],
+    "packs": [],
+    "languages": [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      },
+      {
+        "lang": "fr",
+        "name": "French",
+        "path": "lang/fr.json"
+      }
+    ],
+    "gridDistance": 5,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "",
+    "secondaryTokenAttribute": "",
+    "url": "https://github.com/Dakayl/foundry-ConspiracyXV1/",
+    "manifest": "https://raw.githubusercontent.com/Dakayl/foundry-ConspiracyXV1/main/system.json",
+    "download": "https://github.com/Dakayl/foundry-ConspiracyXV1/archive/...",
+    "license": "LICENSE"
+  }
+  

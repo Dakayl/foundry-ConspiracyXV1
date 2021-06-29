@@ -1,0 +1,10 @@
+<div class="tab" data-group="primary" data-tab="skills">
+    <section class="skills">
+        <h3>{{localize 'CXV1.Skills'}}</h3>
+        <ol>
+            {{#each actor.skills as |skill key|}}
+            {{> "systems/cxv1/templates/actor/lines/skill-line.html"}}
+            {{/each}}
+        </ol>
+    </section>
+</div>
